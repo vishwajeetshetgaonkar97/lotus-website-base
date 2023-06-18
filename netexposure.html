@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Net exposure</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+     
+        --button: rgb(10, 179, 179);
+        --highlight: rgb(204, 11, 204);
+      }
+      body {
+        background-color: var(--backdground);
+        height: fit-content;
+      }
+      .container {
+        padding-top: 3vh;
+        padding-left: 4vh;
+        background-color: #27082a;
+      }
+      .content-name {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+     
+      }
+      .content {
+        padding-top: 4vh;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #27082a;
+        height: fit-content;
+        padding-bottom: 50px;
+      }
+      .radio-right{
+        display: flex;
+      }
+      .content label {
+        padding-right: 1.5vh;
+        padding-left: 1.5vh;
+        cursor: pointer;
+      }
+      .highlight {
+        font-size: 12px;
+        padding-right: 1vh;
+        color: var(--highlight);
+        font-weight: 500;
+        margin-top: 2px;
+      }
+      .refresh {
+        display: flex;
+        width: 98%;
+        justify-content: flex-end;
+        border-bottom: 0.5px solid var(--Heading);
+        margin-top: 1vh;
+      }
+      .refresh div {
+        padding: 1.5vh 2vh;
+        background-color: var(--button);
+        font-size: 14px;
+        color: white;
+        cursor: pointer;
+      }
+      .display {
+        color: rgb(255, 255, 255);
+        padding-top: 2vh;
+        font-size: 14px;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content-name">Net Exposure</div>
+      <div class="content">
+        <input type="radio" id="pt" name="pt" value="pt" checked />
+        <label for="male">My PT</label>
+        <input type="radio" id="book" name="pt" value="book" />
+        <label for="male">Total Book</label>
+        <div class="radio-right">
+        <span class="highlight">Filter By Sport:</span>
+        <p>
+          <input type="radio" id="test1" name="radio-group" checked >
+          <label class="radio-label" for="test1">All</label>
+        </p>
+        <p>
+          <input type="radio" id="test2" name="radio-group">
+          <label class="radio-label" for="test2">Cricket</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group" >
+          <label class="radio-label" for="test1">Football</label>
+        </p>
+        <p>
+          <input type="radio" id="test2" name="radio-group">
+          <label class="radio-label" for="test2">Tennis</label>
+        </p>
+        <p>
+          <input type="radio" id="test2" name="radio-group">
+          <label class="radio-label" for="test2">Horse Racing</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group" >
+          <label class="radio-label" for="test1">Greyhound Racing</label>
+        </p>
+        <p>
+          <input type="radio" id="test2" name="radio-group">
+          <label class="radio-label" for="test2">E-sport</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group" >
+          <label class="radio-label" for="test1">Table Tennis</label>
+        </p>
+        <p>
+          <input type="radio" id="test2" name="radio-group">
+          <label class="radio-label" for="test2">Politics</label>
+        </p>
+      </div>
+      <div class="refresh">
+        <div>
+          <i
+            class="fa fa-refresh"
+            style="font-size: 16px; color: rgb(255, 255, 255)"
+          ></i>
+          Refresh
+        </div>
+      </div>
+      <div class="display">
+        <div>There are currently no matched bets for this sport</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+<html>
+  <head>
+    <title>Transfer</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+        --text: #ffffff;
+        --dowmloadbutton: rgb(10, 179, 179);
+        --memberbutton: rgb(204, 11, 204);
+        --row: rgb(41, 41, 41);
+        --column: rgb(37, 37, 37);
+        --highlight: rgb(10, 179, 179);
+      }
+
+      .content {
+        flex-direction: row;
+        height: 10vh !important;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 0.5px solid var(--Heading);
+        /* padding-bottom: 5vh; */
+      }
+
+      body {
+        background-color: var(--backdground);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      .containerbox {
+        padding-top: 3vh;
+        padding-left: 4vh;
+        background-color: #27082a;
+        padding-bottom: 20px;
+      }
+
+      .content-name {
+        width: 33vh;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+        margin-left: 20px;
+        padding-right: 4vh;
+      }
+
+      .content {
+        padding-top: 2vh;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        display: flex;
+        height: 100px;
+        border-bottom: 1px solid #27082a;
+      }
+
+      .transfer {
+        padding-right: 1vh;
+        flex: 0.98;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .transfer div {
+        padding: 1vh 2vh;
+        background-color: rgb(25, 238, 71);
+        opacity: 0.4;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .line {
+      border-bottom: 0.5px solid var(--Heading);
+      padding-top: 15px;
+      margin-left: 8px;
+      width: 98%;
+    }
+    .upper-line{
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+    }
+      table {
+        margin-top: 2vh;
+        width: 99%;
+      }
+
+      tr {
+        height: 35px;
+        color: var(--text);
+        
+      }
+
+      tr:nth-child(even) {
+        background-color: #38223b;
+      }
+
+      th {
+        height: 3vh;
+        width: 50vh;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    .table-creditlimit{
+        width: 20px;
+        padding-right: 30px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .table-give,.table-take{
+        padding-right: 40px;
+         font-size: 14px;
+        font-weight: 700;
+   
+      }
+      .table-availablebalance,.table-payementthreshold{
+        width: 120px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .table-transfer{
+        color: #8f8f8f;
+        font-weight: 200;
+      }
+      .containerradio {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-top: -1.5vh;
+        margin-left: 3vh;
+      }
+
+      .containerradio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid rgba(255, 255, 255, 0.692);
+      }
+
+      .containerradio:hover input ~ .checkmark {
+        opacity: 0.7;
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .containerradio input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .containerradio .checkmark:after {
+        left: 5px;
+        top: 1px;
+        width: 3px;
+        height: 8px;
+        border: solid rgb(35, 194, 14);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="containerbox">
+      <div class="content">
+        <div class="content-name">Transfer</div>
+
+        <div class="transfer">
+          <div type="button"><i class="fa fa-dollar" style="font-size:14px;color:rgb(255, 255, 255)"></i>&nbsp Bulk Transfer</div>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <div class="display">
+        <div class="upper-line"><p>Available to take: 2,345.00</p></div>
+        <table BORDER=0 CELLSPACING=0>
+          <tr>
+            <td class="checkbox-column">
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="table-head">Login Name</th>
+            <th class="table-head">ID</th>
+            <th class="table-head">Take</th>
+            <th class="table-head">Give</th>
+            <th class="table-head">Payment Threshold</th>
+            <th class="table-head">Credit Limit</th>
+            <th class="table-head">Available Balance</th>
+            <th class="table-head">Transfer</th>
+          </tr>
+          <tr>
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">L9020E09M40</th>
+            <td align ="right" class="table-give">-</td>
+            <td align ="right" class="table-take">-</td>
+            <td align ="right" class="table-payementthreshold">-</td>
+            <td align ="right" class="table-creditlimit">0.00</td>
+            <td align ="right" class="table-availablebalance">0.00</td>
+            <th class="table-transfer">Transfer</th>
+          </tr>
+          <tr>
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">123456</th>
+            <td align ="right" class="table-give">-</td>
+            <td align ="right" class="table-take">-</td>
+            <td align ="right" class="table-payementthreshold">-</td>
+            <td align ="right" class="table-creditlimit">0.00</td>
+            <td align ="right" class="table-availablebalance">0.00</td>
+            <th class="table-transfer">Transfer</th>
+          </tr>
+          <tr>
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">123456</th>
+            <td align ="right" class="table-give">-</td>
+            <td align ="right" class="table-take">-</td>
+            <td align ="right" class="table-payementthreshold">-</td>
+            <td align ="right" class="table-creditlimit">0.00</td>
+            <td align ="right" class="table-availablebalance">0.00</td>
+            <th class="table-transfer">Transfer</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

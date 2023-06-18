@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <title>p&l Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Include Required Prerequisites -->
+  <script type="text/javascript" src="https:/cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+  <script src="calenderscript.js"></script>
+  <link rel="stylesheet" href="calenderstyle.css">
+  <style>
+    :root {
+      --backdground: #3a0c3f;
+      --Heading: #cae0e8;
+      --text: #ffffff;
+      --dowmloadbutton: rgb(3, 189, 59);
+      --newusersbutton: #A222AD;
+      --row: rgb(41, 41, 41);
+      --column: rgb(37, 37, 37);
+      --highlight: rgb(10, 179, 179);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--backdground);
+      height: fit-content;
+    }
+
+    .containerbox {
+      background-color: #27082a;
+      height: fit-content;
+      width: 100%;
+      
+    }
+
+    .content-name {
+      width: fit-content;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--Heading);
+      padding-right: 25px;
+      flex: 0.6;
+    }
+
+    .content {
+      flex-direction: row;
+      height: 60px;
+      padding-left: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgb(196, 196, 196);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 0.5px solid #27082a;
+
+
+    }
+
+    .line {
+      border-bottom: 0.5px solid var(--Heading);
+      margin-left: 20px;
+      width: 96%;
+    }
+
+
+    .download {
+      display: flex;
+      flex: 0.4;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+
+    button {
+      padding:6px 9px;
+      background: rgb(40, 117, 40);
+      cursor: pointer;
+      border: 1px solid rgba(128, 128, 128, 0.411);
+      opacity: 0.4;
+      margin-right: 8%;
+    }
+
+    .display {
+      font-size: 14px;
+      color: var(--text);
+      padding-top: 2vh;
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 4vh;
+      width: 96%;
+      margin-left: 1.7%;
+     
+    }
+  </style>
+</head>
+
+<body>
+  <div class="containerbox">
+    <div class="content">
+      <div class="content-name">Transfer Statement</div>
+     
+      <div class="download">
+        <button type="button" disabled>Download CSV</button>
+      </div>
+    </div>
+   
+    <div class="line">
+    </div>
+    <div class="display">
+      <div>There have been no transfers in the last 180 days.</div>
+    </div>
+  </div>
+
+
+  </div>
+
+</body>
+
+</html>

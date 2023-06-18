@@ -1,0 +1,186 @@
+<html>
+
+<head>
+  <title>user listing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --backdground: #3a0c3f;
+      --Heading: #cae0e8;
+      --text: #ffffff;
+      --dowmloadbutton: rgb(10, 179, 179);
+      --newusersbutton: #A222AD;
+      --row: rgb(41, 41, 41);
+      --column: rgb(37, 37, 37);
+      --highlight: rgb(10, 179, 179);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--backdground);
+      height: fit-content;
+    }
+
+    .transfer {
+      display: flex;
+      flex: 0.4;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-right: 1vh;
+      margin-bottom: -39px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      background-color: #27082a;
+      height: fit-content;
+    }
+
+    .content-name {
+      width: fit-content;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--Heading);
+      padding-right: 4vh;
+    }
+
+    .content {
+      margin-left: 5vh;
+      width: 96%;
+      padding-top: 3vh;
+      padding-bottom: 2vh;
+      flex-direction: row;
+      height: fit-content;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.651);
+
+    }
+
+    .content-right {
+      flex: 0.7;
+
+    }
+
+    .newusers {
+      flex: 0.3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+    }
+
+    .newusers div {
+
+      padding: 1.5vh 2.6vh;
+      font-size: 14px;
+      background-color: var(--newusersbutton);
+      color: white;
+      border: 1px solid rgba(128, 128, 128, 0.411);
+      cursor: pointer;
+      border-right: 2px solid #66166D;
+      border-bottom: 2px solid #66166D;
+    }
+
+    .content {
+      /* margin-left: 5vh; */
+      width: 96%;
+      /* padding-top: 3vh; */
+      padding-bottom: 2vh;
+      flex-direction: row;
+      height: fit-content;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 0.5px solid var(--Heading);
+    }
+
+    .display {
+      font-size: 13px;
+      color: rgb(179, 179, 179);
+      /* padding-top: 3vh; */
+      display: flex;
+      justify-content: center;
+      margin-left: 30px;
+    }
+
+    table {
+      width: 100%;
+      padding-bottom: 10vh;
+    }
+
+    tr {
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--row);
+    }
+
+    th {
+      height: 3vh;
+      width: 50vh;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    td {
+      height: 3vh;
+      width: 30vh;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="content-right">
+        <div class="content-name">User Listing</div>
+      </div>
+      <div class="newusers">
+        <div  type=button onClick="location.href='createnewuser.html'">Create New User</div>
+      </div>
+    </div>
+
+    <div class="display">
+      <table>
+        <tr>
+          <td>Username</td>
+          <th>Edit</th>
+          <th style="width: 25vh;">Access</th>
+          <th>User Status</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Created</th>
+          <th>Last Login Date</th>
+          <th>Last IP</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <title>Event Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+        --button: rgb(204, 11, 204);
+        --refreshbutton: rgb(10, 179, 179);
+        --clearbutton: rgb(179, 16, 10);
+      }
+      body {
+        background-color: var(--backdground);
+      }
+
+      .content-name {
+        margin-left: 4vh;
+        width: 55vh;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+      }
+      .content {
+        flex-direction: row;
+        display: flex;
+        height: 15vh;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(196, 196, 196);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 0.5px solid var(--Heading);
+      }
+
+      [type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    background: #27082a;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background: #2ff560;
+    position: absolute;
+    top: 4.2px;
+    left: 4.5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+   
+      .display {
+        font-size: 13px;
+        color: rgb(255, 255, 255);
+
+        padding-top: 3vh;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="content-name">Event Management</div>
+
+        <p>
+          <input type="radio" id="test1" name="radio-group" checked>
+          <label class="radio-label" for="test1">All</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group"  >
+          <label class="radio-label" for="test1">Cricket</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group" >
+          <label class="radio-label" for="test1">Football</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">Tennis</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">Horse Racing</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">Greyhound Racing</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">E-sport</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">Table Tennis</label>
+        </p>
+        <p>
+          <input type="radio" id="test1" name="radio-group">
+          <label class="radio-label" for="test1">Politics</label>
+        </p>
+      </div>
+      <div class="display">
+        <div>No Events Available</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,472 @@
+<html>
+
+<head>
+  <title>p&l Market</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Include Required Prerequisites -->
+  <script type="text/javascript" src="https:/cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+  <script src="calenderscript.js"></script>
+  <link rel="stylesheet" href="calenderstyle.css">
+  <style>
+    :root {
+      --backdground: #3a0c3f;
+      --Heading: #cae0e8;
+      --text: #ffffff;
+      --dowmloadbutton: rgb(3, 189, 59);
+      --newusersbutton: #A222AD;
+      --row: rgb(41, 41, 41);
+      --column: rgb(37, 37, 37);
+      --highlight: rgb(10, 179, 179);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--backdground);
+      height: fit-content;
+    }
+
+    .containerbox {
+      background-color: #27082a;
+      height: fit-content;
+      width: 100%;
+      
+    }
+
+    .content-name {
+      width: fit-content;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--Heading);
+      padding-right: 25px;
+      flex: 0.7;
+    }
+
+    .content {
+      flex-direction: row;
+      height: 60px;
+      padding-left: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgb(196, 196, 196);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 0.5px solid #27082a;
+
+
+    }
+
+    .line {
+      border-bottom: 0.5px solid var(--Heading);
+      margin-left: 20px;
+      width: 96%;
+    }
+
+    .filter {
+      padding: 0px;
+      height: 30px;
+      width: 30px;
+      background-color: #37133f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: 15%;
+      margin-top: 1vh;
+
+    }
+
+    .filter:focus {
+      background-color: #ffffff;
+
+    }
+
+    #toggle {
+      width: 100%;
+      height: fit-content;
+      display: none;
+      padding-bottom: 8px;
+      padding-top: 8px;
+      margin-left: 5px;
+
+    }
+
+    .dropdownbutton {
+      background-color: #37133f;
+      padding: 8px;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2vh;
+      height: 35px;
+    }
+
+    .dropdownbutton a {
+      color: white;
+    }
+
+    .dropdownbutton a:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .download {
+      display: flex;
+      flex: 0.4;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+
+    button {
+      padding:6px 9px;
+      background: rgb(40, 117, 40);
+      cursor: pointer;
+      border: 1px solid rgba(128, 128, 128, 0.411);
+      opacity: 0.4;
+      margin-right: 8%;
+    }
+
+    .apply {
+      padding:6px 9px;
+      background: #139993;
+      cursor: pointer;
+      border-bottom: 2px solid #0a5551;
+      border-right: 2px solid #0a5551;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2vh;
+      height: 35px;
+    }
+
+    .clear {
+      padding:6px 9px;
+      background: rgb(228, 16, 16);
+      cursor: pointer;
+      border-bottom: 2px solid #841001;
+      border-right: 2px solid #841001;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2vh;
+      height: 35px;
+    }
+
+    input {
+      background-color: #110313;
+      border: none;
+      margin-left: 2vh;
+      padding: 2vh;
+      font-size: 14px;
+      font-weight: bold;
+      height: 35px;
+    }
+
+    .display {
+      font-size: 14px;
+      color: var(--text);
+      padding-top: 2vh;
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 4vh;
+      width: 96%;
+      margin-left: 1.7%;
+     
+    }
+
+    .calender {
+      position: absolute;
+      top: 4.6%;
+      left: 27%;
+      cursor: pointer;
+    }
+
+    .fa.fa-calender.fa-2x {
+      cursor: pointer;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+
+    .ranges>ul li:last-of-type {
+      display: none;
+    }
+
+    .daterangepicker {
+      height: 500px;
+      width: 636px;
+      border-radius: 0;
+      position: relative;
+    }
+
+    .daterangepicker select.monthselect {
+      font-size: 16px;
+      width: 110px;
+    }
+
+    .daterangepicker .dropdown-menu .ltr .opensleft .show-calendar {
+      z-index: 1;
+      position: relative;
+    }
+
+    .daterangepicker .calendar-time {
+      text-align: center;
+      margin: 5px auto;
+      line-height: 30px;
+      padding-left: 28px;
+      position: absolute;
+      top: 288px;
+    }
+
+    .ranges {
+      position: absolute;
+      top: 256px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ranges ul>li:last-child {
+      /* display: none; */
+      background-color: aqua;
+      visibility: hidden;
+    }
+
+    .ranges li {
+      border-radius: 0px;
+    }
+
+    .daterangepicker_input {
+      display: block;
+    }
+
+    .calendar.right,
+    .calendar.left {
+      width: 50%;
+    }
+
+    .calendar.right thead tr,
+    .calendar.left thead tr {
+      color: #230726;
+      font-size: 16px;
+    }
+
+    .daterangepicker td.active,
+    .daterangepicker td.active:hover {
+      background-color: #613366;
+      border-color: transparent;
+      color: #fff;
+      border-radius: 0;
+      padding: 4px;
+    }
+
+    .daterangepicker td {
+      padding: 12px;
+    }
+
+    .daterangepicker td.in-range {
+      background-color: #ebc8ef;
+      border-color: transparent;
+      color: #000;
+      border-radius: 0;
+    }
+
+    .daterangepicker select.monthselect,
+    .daterangepicker select.yearselect {
+      font-size: 16px;
+    }
+
+    .daterangepicker td.available:hover,
+    .daterangepicker th.available:hover {
+      background-color: #ebc8ef;
+      border-radius: 0;
+    }
+
+    .daterangepicker .calendar th,
+    .daterangepicker .calendar td {
+      white-space: nowrap;
+      text-align: center;
+      font-size: 14px;
+    }
+
+
+    .daterangepicker.ltr .calendar.left {
+      clear: left;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .range_inputs {
+      position: absolute;
+      bottom: 10px !important;
+      right: -445px;
+      clear: both;
+    }
+
+    .ranges li {
+      font-size: 13px;
+      background-color: #f5f5f5;
+      color: #202020;
+      padding: 3px 12px;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
+    .ranges li:hover,
+    .ranges li.active {
+      background-color: #9b9c9d;
+      border: none;
+      color: #fff;
+      border-radius: 0;
+    }
+
+    #date-range-text {
+      font-size: 16px;
+      margin-top: 75px;
+    }
+
+    .hourselect,
+    .ampmselect,
+    .minuteselect {
+      font-size: 16px;
+      padding: 2px;
+    }
+
+    .calendar-time {
+      width: 100%;
+    }
+
+    .fa.fa-clock-o.glyphicon.glyphicon-time {
+      display: none;
+    }
+
+    .ranges ul li {
+      display: none;
+    }
+
+    .select-day {
+      width: 100px;
+      padding: 7px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="containerbox">
+    <div class="content">
+      <div class="content-name">P&L Report by Market</div>
+      <div class="filter" onclick="myFunction()">
+        <i class="fa fa-filter" style="font-size: 20px; color: white"></i>
+      </div>
+      <div class="calender">
+        <div id="reportrange" class="pull-right"
+          style="background: #37133f; cursor: pointer;font-size: 14px; padding: 5px 10px;color: #ffffff; width: 100%,">
+          <span></span> <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </div>
+
+      </div>
+      <div class="download">
+        <button type="button" disabled>Download CSV</button>
+      </div>
+    </div>
+    <div id="toggle">
+      <div class="dropdown dropdownbutton">
+        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle"
+          href="#">
+          <span>Sport:</span><span id="selected"
+            style=" width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">All</span><span
+            class="caret"></span></a>
+        <ul class="dropdown-menu ">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Cricket</a></li>
+          <li><a href="#">football</a></li>
+          <li><a href="#">Tennis</a></li>
+          <li><a href="#">Horse Racing</a></li>
+          <li><a href="#">Greyhound Racing</a></li>
+          <li><a href="#">Casino</a></li>
+          <li><a href="#">Esport</a></li>
+          <li><a href="#">Table Tennis</a></li>
+          <li><a href="#">Politics</a></li>
+        </ul>
+      </div>
+      <div class="dropdown dropdownbutton">
+        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle"
+          href="#">
+          <span>Market Type:</span><span id="selected"
+            style=" width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">All</span><span
+            class="caret"></span></a>
+        <ul class="dropdown-menu ">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Cricket</a></li>
+          <li><a href="#">football</a></li>
+          <li><a href="#">Tennis</a></li>
+          <li><a href="#">Horse Racing</a></li>
+          <li><a href="#">Greyhound Racing</a></li>
+          <li><a href="#">Casino</a></li>
+          <li><a href="#">Esport</a></li>
+          <li><a href="#">Table Tennis</a></li>
+          <li><a href="#">Politics</a></li>
+        </ul>
+      </div>
+      <input type="text" id="fname" name="fname" placeholder="Event">
+      <input type="text" id="fname" name="fname" placeholder="Agency/Member Name">
+      <div type="button" class="apply">Apply</div>
+      <div type="button" class="clear">Clear</div>
+    </div>
+    <div class="line">
+    </div>
+    <div class="display">
+      <div>There is no data for selected filters.</div>
+    </div>
+  </div>
+
+
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("toggle");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    $('.dropdown-menu a').click(function () {
+      $('#selected').text($(this).text());
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>Balance</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+     href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+        --text: #ffffff;
+        --dowmloadbutton: rgb(10, 179, 179);
+        --newusersbutton: #a222ad;
+        --row: rgb(41, 41, 41);
+        --column: rgb(37, 37, 37);
+        --highlight: rgb(10, 179, 179);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--backdground);
+        height: fit-content;
+      }
+      .container {
+        background-color: #27082a;
+        height: fit-content;
+        padding: 3vh;
+        padding-bottom: 4vh;
+      }
+      .content {
+        background-color: #19051b;
+        height: 14vh;
+        margin-left: 2vh;
+        padding-bottom: 25%;
+        border-bottom: 1px solid #19051b;
+      }
+      .box{
+        padding-left: 4vh;
+    width: 100%;
+       
+      }
+      .content-name {
+        width: 98%;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+        padding-right: 4vh;
+        border-bottom: 1px solid white;
+        padding-bottom: 2vh;
+      }
+      table {
+        width: 300px;
+        background-color:#2e1d31;
+        margin-top: 2vh;
+      }
+
+      tr {
+        height: 30px;
+      }
+      tr:nth-child(even) {
+        background-color: #19051b;
+      }
+      th {
+      
+        width: 50vh;
+        font-weight: bold;
+        font-size: 14px;
+        color: #ffffff;
+      }
+      td {
+      
+        width: fit-content;
+        font-weight: bold;
+        font-size: 13.5px;
+        color: #ffffff;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .greenhighlight {
+        color: rgb(18, 245, 105);
+      }
+      .redhighlight {
+        color: rgb(223, 39, 15);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="box">
+          <div class="heading">
+            <div class="content-name">Balance Information</div>
+          </div>
+            <table cellspacing="0" cellpadding="0">
+              <tr>
+                <td>Net Exposure</td>
+                <td align ="right" class="greenhighlight">0.00</td>
+              </tr>
+              <tr>
+                <td>Balance Down</td>
+                <td  align ="right" class="greenhighlight">1,234.00</td>
+              </tr>
+              <tr>
+                <td>Balance Up</td>
+                <td  align ="right" class="redhighlight">-1234.00</td>
+              </tr>
+
+              <tr>
+                <td>Credit Limit</td>
+                <td  align ="right">20,000.00</td>
+              </tr>
+              <tr>
+                <td>Available Credit</td>
+                <td  align ="right">2350.00</td>
+              </tr>
+              <tr>
+                <td>Total Credit Given To members</td>
+                <td  align ="right">23506.00</td>
+              </tr>
+            </table>
+         
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

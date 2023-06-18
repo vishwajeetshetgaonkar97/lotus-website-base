@@ -1,0 +1,328 @@
+<html>
+  <head>
+    <title>Transfer</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+        --text: #ffffff;
+        --dowmloadbutton: rgb(10, 179, 179);
+        --memberbutton: rgb(204, 11, 204);
+        --row: rgb(41, 41, 41);
+        --column: rgb(37, 37, 37);
+        --highlight: rgb(10, 179, 179);
+        --tableinnerborder:  #442a47;
+      }
+
+      .content {
+        flex-direction: row;
+        height: 10vh !important;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 0.5px solid rgba(188, 211, 209, 0.651);
+        /* padding-bottom: 5vh; */
+      }
+
+      body {
+        background-color: var(--backdground);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      .containerbox {
+        padding-top: 3vh;
+        padding-left: 4vh;
+        background-color: #27082a;
+        padding-bottom: 20px;
+      }
+
+      .content-name {
+        width: fit-content;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+        margin-left: 20px;
+        padding-right: 4vh;
+      }
+      .top-search{
+          font-size: 14;
+          font-weight: 500;
+          margin-left: 6%;
+      }
+   
+      input[type="text"]{
+          height: 32px;
+          padding: 5px;
+          width: 160px;
+          
+      }
+      input::-webkit-input-placeholder {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(163, 163, 163);
+}
+      .content {
+        padding-top: 2vh;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        display: flex;
+        height: 100px;
+        border-bottom: 1px solid #27082a;
+      }
+
+      .transfer {
+        padding-right: 1vh;
+        flex: 0.98;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .transfer div {
+        padding: 1vh 2vh;
+        background-color: rgb(25, 238, 71);
+        opacity: 0.4;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .line {
+      border-bottom: 0.5px solid var(--Heading);
+      padding-top: 15px;
+      margin-left: 8px;
+      width: 98%;
+    }
+    .upper-line{
+    color: #ffffff;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+    }
+    .upper-line-right{
+        margin-left: 65%;
+        font-size: 14px;
+    font-weight: 700;
+    }
+      table {
+        margin-top: 2vh;
+        width: 99%;
+      }
+
+      tr {
+        height: 25px;
+        color: var(--text);
+        
+      }
+
+      tr:nth-child(odd) {
+        background-color: #38223b;
+      }
+
+      th {
+        height: 3vh;
+        width: 50vh;
+        font-size: 14px;
+        font-weight: 550;
+      }
+      .table-name{
+          width: 600px;
+          font-weight: 600;
+      }
+      .table-id{
+          width: 300px;
+          font-weight: 600;
+      }.table-head{
+        font-weight: 600;
+      }
+      .containerradio {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-top: -1.5vh;
+        margin-left: 3vh;
+      }
+
+      .containerradio input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 2px solid rgba(255, 255, 255, 0.692);
+      }
+
+      .containerradio:hover input ~ .checkmark {
+        opacity: 0.7;
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .containerradio input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .containerradio .checkmark:after {
+        left: 5px;
+        top: 1px;
+        width: 3px;
+        height: 8px;
+        border: solid rgb(35, 194, 14);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="containerbox">
+      <div class="content">
+        <div class="content-name">Position Taking Listing</div>
+        <div class="top-search">Search By Login Name  &nbsp<input type="text" placeholder="Agency/Member Name"/></div>
+        <div class="transfer">
+          <div type="button"> Edit PT</div>
+        </div>
+      </div>
+      <div class="line">
+      </div>
+      <div class="display">
+        <div class="upper-line"><i>Position Taking Listing </i><span class="upper-line-right">Agent Max PT: 0/0/0/0/0/0/0 %</span></div>
+        <table BORDER=0 CELLSPACING=0>
+          <tr style="height: 40px; background-color: #442a47;">
+            <td class="checkbox-column">
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="table-name">Login Name <sub><i class="fa fa-caret-down icon"  style='font-size:16px;'></i></sub></th>
+            <th class="table-id">ID</th>
+            <th class="table-head"><sub><span style='font-size:16px;color: #ffffff;'>&#9681</span></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head"><sub><i class="far fa-futbol" style='font-size:14px;'></i></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head"><sub><i class='fas fa-baseball-ball' style='font-size:14px;'></i></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head"><sub> <i  class="fas fa-dog"style='font-size:14px;'></i></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head"><sub> <i class="fas fa-horse-head"style='font-size:14px;'></i></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head"><sub> <span style='font-size:22px;color: #ffffff;'>&#9824;</span></sub> (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+            <th class="table-head">Others (0%) <sub><i class="fa fa-caret-down icon" style='font-size:16px;color:rgb(100, 100, 100)'></i></sub> </th>
+         
+          </tr>
+          <tr >
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">L9020E09M40</th>
+            <th style=" border-left: 1.5px solid var(--tableinnerborder);
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style=" 
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style=" 
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style="
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+              <th style="
+              border-right: 1.5px solid var(--tableinnerborder)">0</th>
+          </tr>
+          <tr>
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">L9020E09M40</th>
+            <th style=" border-left: 1.5px solid var(--tableinnerborder);
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style=" 
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style=" 
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style="
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+              <th style="
+              border-right: 1.5px solid var(--tableinnerborder)">0</th>
+          </tr>
+          <tr>
+            <td>
+              <label class="containerradio">
+                <input type="checkbox"  />
+                <span class="checkmark"></span>
+              </label>
+            </td>
+            <th class="highlight">demo</th>
+            <th class="highlight">L9020E09M40</th>
+            <th style=" border-left: 1.5px solid var(--tableinnerborder);
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style=" 
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style=" 
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+            <th style="
+            border-right: 1.5px solid var(--tableinnerborder)">0</th>
+             <th style="
+             border-right: 1.5px solid var(--tableinnerborder)">0</th>
+              <th style="
+              border-right: 1.5px solid var(--tableinnerborder)">0</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

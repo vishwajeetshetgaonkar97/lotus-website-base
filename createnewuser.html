@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <title>create new user</title>
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --backdground: #3a0c3f;
+        --Heading: #cae0e8;
+        --text: #ffffff;
+        --dowmloadbutton: rgb(10, 179, 179);
+        --newusersbutton: #a222ad;
+        --row: rgb(41, 41, 41);
+        --column: rgb(37, 37, 37);
+        --highlight: rgb(10, 179, 179);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--backdground);
+        height: fit-content;
+      }
+      .containerbox {
+        background-color: #27082a;
+        height: fit-content;
+      }
+      .content-name {
+        width: fit-content;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--Heading);
+        padding-right: 4vh;
+      }
+      .content {
+        margin-left: 5vh;
+        width: 96%;
+        padding-top: 3vh;
+        padding-bottom: 2vh;
+        flex-direction: row;
+        height: fit-content;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.651);
+      }
+      .display {
+        height: 71.5vh;
+      }
+      .box {
+        height: fit-content;
+        width: fit-content;
+        background-color: rgba(255, 255, 255, 0.07);
+        margin-left: 5vh;
+        margin-top: 2vh;
+        padding: 4vh;
+   
+      }
+      .box-heading {
+        padding-top: 2vh;
+        font-size: 18px;
+        font-weight: 700;
+        color: #ffffff;
+        border-bottom: 1px solid white;
+      }
+      form {
+        margin-top: 7vh;
+        margin-left: -2vh;
+      }
+      input {
+        height: 10vh;
+        width: 45vh;
+        border: 2px solid #dddddd;
+        color: #8f8d8d;
+        font-size: 14px;
+        padding: 2vh;
+      }
+      input[type="password"] {
+        height: 10vh;
+        width: 45vh;
+        border: 2px solid #dddddd;
+        color: #000000;
+        font-size: 18px;
+        padding: 1vh;
+      }
+      select {
+        height: 10vh;
+        width: 45vh;
+        border: 2px solid #a222ad;
+      }
+      .form-column {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-bottom: 5vh;
+      }
+  .form-names{
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 14px;
+      width: 22vh;
+      margin-left: 4vh;
+  }
+      .display-bottom {
+        background-color: #27082a;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+      }
+      .cancel {
+          color: #19c736;
+          cursor: pointer;
+      }
+      .cancel:hover {
+        text-decoration: underline;
+      }
+      .create {
+        flex: 0.1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .create div {
+        padding: 1.5vh 2.6vh;
+        font-size: 14px;
+        background-color: var(--newusersbutton);
+        color: white;
+        border: 1px solid rgba(128, 128, 128, 0.411);
+        cursor: pointer;
+        border-right: 2px solid #66166d;
+        border-bottom: 2px solid #66166d;
+        margin-right: 4vh;
+        margin-top: -2vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="containerbox">
+      <div class="content">
+        <div class="content-right">
+          <div class="content-name">Create New User</div>
+        </div>
+       
+      </div>
+
+      <div class="display">
+        <div class="box">
+          
+            <div class="box-heading">Information</div>
+            <form >
+                <div class="form-column">
+              <div class="form-names">
+                <label for="name">Username</label>
+              </div>
+              <input type="text" id="name" value="eg:abc.xyz" />
+              <div class="form-names">
+                <label for="opt">Status</label>
+              </div>
+              <select name="opt" id="opt">
+                <option value="volvo">ACTIVE</option>
+                <option value="saab">INACTIVE</option></select
+              ></div>
+              <div class="form-column">
+              <div class="form-names">
+                <label for="pwd">Password</label>
+              </div>
+              <input type="password" id="pwd" name="pwd" value="12345678" />
+              <div class="form-names">
+                <label for="pwd">Repeat Password</label>
+              </div>
+              <input type="password" id="pwd" name="pwd" />
+              </div>
+              <div class="form-column">
+              <div class="form-names">
+                <label for="fname">First Name</label>
+              </div>
+              <input type="text" id="lname" />
+              <div class="form-names">
+                <label for="lname">Last Name</label>
+              </div>
+              <input type="text" id="lname" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="display-bottom">
+          <div class="cancel" type=button onClick="location.href='userlisting.html'">Cancel</div>
+        
+        <div class="create" >
+        <div>Create</div>
+      </div></div>
+    </div>
+  </body>
+</html>
