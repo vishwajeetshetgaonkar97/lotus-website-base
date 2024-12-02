@@ -1,4 +1,3 @@
 lotus-website-base ( side hustle )
+https://lotus-gambling-website-template.netlify.app/
 
-NOTE
-- CSS needs improvement
